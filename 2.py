@@ -21,7 +21,7 @@ def recognize_text():
 
 
 if __name__ == '__main__':
-    src = cv.imread("code.png")
+    src = cv.imread("test.png")
     cv.imshow("src", src)
     recognize_text()
     cv.waitKey(0)
