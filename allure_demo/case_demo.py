@@ -14,14 +14,14 @@ class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
     @allure.title('乘法测试')
     def test_plus(self):
         result = self.plus(3, 4)
-        self.assertEqual(result, 13, '乘法')
+        self.assertEqual(result, 12, '乘法')
 
     def test_division(self):
         result = self.division(9, 3)
         self.assertEqual(result, 3, '除法')
 
     @allure.title('减法')
-    @pytest.mark.skipif('1+1==2', 'skip if')
+    @pytest.mark.skipif('1+1==3', 'skip if')
     def test_sub(self):
         result = self.subtraction(7, 3)
         self.assertEqual(result, 4, '减法')
@@ -31,7 +31,7 @@ class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
     @pytest.mark.xfail(condition=lambda: True, reason='this test is expecting failure')
     def test_xfail_expected_failure(self):
         """this test is an xfail that will be marked as expected failure"""
-        assert False
+        assert True
 
     @pytest.mark.xfail(condition=lambda: True, reason='this test is expecting failure')
     @allure.feature('Xfail')
