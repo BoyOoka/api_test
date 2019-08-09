@@ -4,7 +4,7 @@ import pytest
 import allure
 
 
-class CaseDemo(cls_demo.Demo, unittest.TestCase):
+class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
 
     @allure.title('加法测试')
     def test_add(self):
