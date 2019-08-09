@@ -21,7 +21,7 @@ class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
         self.assertEqual(result, 3, '除法')
 
     @allure.title('减法')
-    @pytest.mark.skipif(1+1 != 7, reason='skip if')
+    @pytest.mark.skipif(1+1 != 8, reason='skip if')
     def test_sub(self):
         result = self.subtraction(7, 3)
         self.assertEqual(result, 4, '减法')
