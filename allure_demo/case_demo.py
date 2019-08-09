@@ -23,8 +23,8 @@ class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
     @allure.title('减法')
     @pytest.mark.skipif(1+1 != 2, reason='skip if')
     def test_sub(self):
-        result = self.subtraction(7, 3)
-        self.assertEqual(result, 4, '减法')
+        result = self.subtraction(7, 4)
+        self.assertEqual(result, 3, '减法')
         assert True
 
     @allure.feature('Xfail')
