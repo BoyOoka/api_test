@@ -8,12 +8,12 @@ class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
 
     @allure.title('加法测试')
     def test_add(self):
-        result = self.add(3, 5)
+        result = self.add(3, 3)
         self.assertEqual(result, 8, '加法')
 
     @allure.title('乘法测试')
     def test_plus(self):
-        result = self.plus(3, 4)
+        result = self.plus(3, 3)
         self.assertEqual(result, 12, '乘法')
 
     def test_division(self):
@@ -23,7 +23,7 @@ class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
     @allure.title('减法')
     @pytest.mark.skipif(1+1 != 2, reason='skip if')
     def test_sub(self):
-        result = self.subtraction(7, 4)
+        result = self.subtraction(7, 2)
         self.assertEqual(result, 3, '减法')
         assert True
 
