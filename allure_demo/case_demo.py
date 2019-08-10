@@ -14,7 +14,7 @@ class TestCaseDemo(cls_demo.Demo, unittest.TestCase):
     @allure.title('乘法测试')
     def test_plus(self):
         result = self.plus(3, 4)
-        self.assertEqual(result, 13, '乘法')
+        self.assertEqual(result, 12, '乘法')
 
     def test_division(self):
         result = self.division(9, 3)
